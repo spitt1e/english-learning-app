@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Learning App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app">
+        <nav class="sidebar">
+            <div class="logo">
+                <h1>📚 English Learning</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="nav-link active" data-section="grammar">📖 Грамматика</a></li>
+                <li><a href="#" class="nav-link" data-section="practice">✍️ Практика</a></li>
+                <li><a href="#" class="nav-link" data-section="vocabulary">📝 Словарь</a></li>
+                <li><a href="#" class="nav-link" data-section="det">🎯 Подготовка к DET</a></li>
+                <li><a href="#" class="nav-link" data-section="progress">📊 Прогресс</a></li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            <section id="grammar" class="section active">
+                <h2>Грамматические правила</h2>
+                <div class="grammar-topics">
+                    <div class="topic-card" data-topic="present-simple">
+                        <h3>Present Simple</h3>
+                        <p>Простое настоящее время</p>
+                    </div>
+                    <div class="topic-card" data-topic="present-continuous">
+                        <h3>Present Continuous</h3>
+                        <p>Настоящее длительное время</p>
+                    </div>
+                    <div class="topic-card" data-topic="past-simple">
+                        <h3>Past Simple</h3>
+                        <p>Простое прошедшее время</p>
+                    </div>
+                    <div class="topic-card" data-topic="articles">
+                        <h3>Артикли</h3>
+                        <p>a, an, the</p>
+                    </div>
+                    <div class="topic-card" data-topic="conditionals">
+                        <h3>Conditionals</h3>
+                        <p>Условные предложения</p>
+                    </div>
+                    <div class="topic-card" data-topic="modals">
+                        <h3>Modal Verbs</h3>
+                        <p>Модальные глаголы</p>
+                    </div>
+                    <div class="topic-card" data-topic="much-many">
+                        <h3>Much / Many</h3>
+                        <p>Много/многие</p>
+                    </div>
+                    <div class="topic-card" data-topic="too-enough">
+                        <h3>Too / Enough / So / Such</h3>
+                        <p>Слишком/достаточно</p>
+                    </div>
+                    <div class="topic-card" data-topic="have-tenses">
+                        <h3>Have Tenses</h3>
+                        <p>Времена с have</p>
+                    </div>
+                    <div class="topic-card" data-topic="some-any">
+                        <h3>Some / Any</h3>
+                        <p>Некоторый/любой</p>
+                    </div>
+                    <div class="topic-card" data-topic="few-little">
+                        <h3>Few / Little / A few / A little</h3>
+                        <p>Мало/немного</p>
+                    </div>
+                </div>
+                <div id="grammar-content" class="grammar-content"></div>
+            </section>
+
+            <section id="practice" class="section">
+                <h2>Практические упражнения</h2>
+                <div class="practice-types">
+                    <button class="practice-btn" data-type="fill-blanks">Заполнить пропуски</button>
+                    <button class="practice-btn" data-type="choose-correct">Выбрать правильный ответ</button>
+                    <button class="practice-btn" data-type="translate">Перевод</button>
+                    <button class="practice-btn" data-type="tense-comparison">Сравнение времён</button>
+                </div>
+                <div id="practice-area" class="practice-area"></div>
+            </section>
+
+            <section id="vocabulary" class="section">
+                <h2>Словарный запас</h2>
+                <div class="vocab-controls">
+                    <button id="add-word-btn" class="btn-primary">+ Добавить слово</button>
+                    <button id="start-flashcards" class="btn-secondary">🎴 Начать флеш-карточки</button>
+                    <button id="random-word-btn" class="btn-secondary">🎲 Случайное слово</button>
+                </div>
+                <div id="word-form" class="word-form hidden">
+                    <input type="text" id="english-word" placeholder="English word">
+                    <input type="text" id="transcription" placeholder="Транскрипция (например: /ˈwɜːd/)">
+                    <input type="text" id="russian-word" placeholder="Русский перевод">
+                    <input type="text" id="word-example" placeholder="Пример предложения">
+                    <div id="suggestions" class="suggestions hidden">
+                        <h4>💡 Предложения:</h4>
+                        <div id="translation-suggestions"></div>
+                        <div id="example-suggestions"></div>
+                    </div>
+                    <button id="save-word" class="btn-primary">Сохранить</button>
+                    <button id="cancel-word" class="btn-secondary">Отмена</button>
+                </div>
+                <div id="vocabulary-list" class="vocabulary-list"></div>
+                <div id="random-word-area" class="random-word-area hidden">
+                    <div class="random-word-card">
+                        <h3>🎲 Случайное слово</h3>
+                        <div class="random-word-content">
+                            <p class="random-word-english" id="random-english"></p>
+                            <p class="random-word-russian" id="random-russian"></p>
+                            <p class="random-word-example" id="random-example"></p>
+                        </div>
+                        <div class="random-word-buttons">
+                            <button id="add-random-word" class="btn-primary">Добавить</button>
+                            <button id="skip-random-word" class="btn-secondary">Следующее</button>
+                            <button id="close-random-word" class="btn-danger">Закрыть</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="flashcard-area" class="flashcard-area hidden">
+                    <div class="flashcard" id="flashcard">
+                        <div class="flashcard-front">
+                            <p id="flashcard-word"></p>
+                            <button id="flip-card" class="btn-primary">Перевернуть</button>
+                        </div>
+                        <div class="flashcard-back hidden">
+                            <p id="flashcard-translation"></p>
+                            <p id="flashcard-example"></p>
+                            <div class="flashcard-buttons">
+                                <button id="know-word" class="btn-success">Знаю</button>
+                                <button id="dont-know-word" class="btn-danger">Не знаю</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="det" class="section">
+                <h2>Подготовка к Duolingo English Test</h2>
+                <div class="det-placeholder">
+                    <div class="det-info">
+                        <h3>🎯 О разделе</h3>
+                        <p>Этот раздел предназначен для подготовки к Duolingo English Test (DET).</p>
+                        <p>Здесь будут материалы для тренировки всех типов заданий из теста.</p>
+                        
+                        <h3>📋 Типы заданий DET:</h3>
+                        <ul class="det-tasks">
+                            <li>📝 Read and Complete</li>
+                            <li>🎤 Listen and Type</li>
+                            <li>🗣️ Read Aloud</li>
+                            <li>📷 Speak About the Photo</li>
+                            <li>✍️ Write About the Photo</li>
+                            <li>📖 Read and Select</li>
+                            <li>👂 Listen and Select</li>
+                            <li>💬 Speak About a Topic</li>
+                            <li>📝 Writing Sample</li>
+                            <li>🗣️ Speaking Sample</li>
+                        </ul>
+                        
+                        <div class="det-coming-soon">
+                            <p>🚧 Раздел в разработке...</p>
+                            <p>Скоро здесь появятся упражнения и материалы для подготовки!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="progress" class="section">
+                <h2>Ваш прогресс</h2>
+                
+                <div class="session-tracker">
+                    <h3>⏱️ Помодоро таймер</h3>
+                    <div class="pomodoro-info">
+                        <p>Сессия: <span id="pomodoro-session">1</span>/3</p>
+                        <p>Режим: <span id="pomodoro-mode">Учёба</span></p>
+                    </div>
+                    <div class="timer-display">
+                        <p id="timer-display">40:00</p>
+                    </div>
+                    <div class="timer-controls">
+                        <button id="start-timer" class="btn-primary">Начать</button>
+                        <button id="pause-timer" class="btn-secondary" disabled>Пауза</button>
+                        <button id="skip-timer" class="btn-secondary" disabled>Пропустить</button>
+                        <button id="reset-timer" class="btn-danger">Сброс</button>
+                    </div>
+                    <div id="session-log" class="session-log"></div>
+                </div>
+                
+                <div class="session-checklist">
+                    <h3>📋 Активность за сессию</h3>
+                    <div class="checklist-items">
+                        <label class="checklist-item">
+                            <input type="checkbox" id="check-grammar">
+                            <span>📖 Грамматика</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox" id="check-listening">
+                            <span>🎧 Аудирование</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox" id="check-writing">
+                            <span>✍️ Письмо</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox" id="check-det">
+                            <span>🎯 DET</span>
+                        </label>
+                    </div>
+                    <button id="complete-session" class="btn-primary" style="margin-top: 1rem; width: 100%;">✅ Завершить сессию</button>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Выучено слов</h3>
+                        <p id="words-learned" class="stat-number">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Выполнено упражнений</h3>
+                        <p id="exercises-completed" class="stat-number">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Правильных ответов</h3>
+                        <p id="correct-answers" class="stat-number">0%</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Дней обучения</h3>
+                        <p id="days-studied" class="stat-number">0</p>
+                    </div>
+                </div>
+                <div class="progress-chart">
+                    <h3>Активность за неделю</h3>
+                    <div id="activity-chart" class="activity-chart"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
