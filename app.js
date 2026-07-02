@@ -572,6 +572,51 @@ const_exercises = {
             question: 'If it rains, we ___ inside.',
             options: ['stay', 'stayed', 'will stay', 'staying'],
             correct: 2
+        },
+        {
+            question: 'There isn\'t ___ milk in the fridge.',
+            options: ['some', 'any', 'many', 'few'],
+            correct: 1
+        },
+        {
+            question: 'How ___ apples do you need?',
+            options: ['much', 'many', 'little', 'few'],
+            correct: 1
+        },
+        {
+            question: 'She has ___ friends in this city.',
+            options: ['a few', 'a little', 'much', 'too'],
+            correct: 0
+        },
+        {
+            question: 'I need ___ water, please.',
+            options: ['a few', 'a little', 'many', 'few'],
+            correct: 1
+        },
+        {
+            question: 'This coffee is ___ hot to drink.',
+            options: ['too', 'enough', 'so', 'such'],
+            correct: 0
+        },
+        {
+            question: 'He isn\'t old ___ to drive a car.',
+            options: ['too', 'enough', 'so', 'such'],
+            correct: 1
+        },
+        {
+            question: '___ sun is shining brightly today.',
+            options: ['A', 'An', 'The', '—'],
+            correct: 2
+        },
+        {
+            question: 'She ___ been to Paris three times.',
+            options: ['has', 'have', 'is', 'was'],
+            correct: 0
+        },
+        {
+            question: 'You ___ smoke here. It\'s forbidden.',
+            options: ['can', 'mustn\'t', 'should', 'may'],
+            correct: 1
         }
     ],
     'choose-correct': [
@@ -598,6 +643,51 @@ const_exercises = {
         {
             question: 'Выберите правильный вариант: I would go if I ___ time.',
             options: ['have', 'had', 'will have', 'having'],
+            correct: 1
+        },
+        {
+            question: 'Выберите правильный вариант: Would you like ___ tea?',
+            options: ['some', 'any', 'many', 'few'],
+            correct: 0
+        },
+        {
+            question: 'Выберите правильный вариант: There is ___ sugar left.',
+            options: ['few', 'little', 'many', 'a few'],
+            correct: 1
+        },
+        {
+            question: 'Выберите правильный вариант: She is ___ a kind person!',
+            options: ['so', 'such', 'too', 'enough'],
+            correct: 1
+        },
+        {
+            question: 'Выберите правильный вариант: He ___ his keys. He can\'t find them.',
+            options: ['loses', 'has lost', 'is losing', 'lost yesterday'],
+            correct: 1
+        },
+        {
+            question: 'Выберите правильный вариант: I ___ breakfast at 8 o\'clock every day.',
+            options: ['am having', 'have', 'has', 'had'],
+            correct: 1
+        },
+        {
+            question: 'Выберите правильный вариант: ___ honest man told us the truth.',
+            options: ['A', 'An', 'The', '—'],
+            correct: 1
+        },
+        {
+            question: 'Выберите правильный вариант: You ___ see a doctor. You look ill.',
+            options: ['can', 'must', 'may', 'would'],
+            correct: 1
+        },
+        {
+            question: 'Выберите правильный вариант: If I ___ you, I would apologize.',
+            options: ['am', 'was', 'were', 'be'],
+            correct: 2
+        },
+        {
+            question: 'Выберите правильный вариант: How ___ time do we have?',
+            options: ['many', 'much', 'few', 'a few'],
             correct: 1
         }
     ],
@@ -626,6 +716,51 @@ const_exercises = {
             question: 'Переведите: "Если бы я был богат, я бы путешествовал"',
             options: ['If I am rich, I will travel', 'If I was rich, I travelled', 'If I were rich, I would travel', 'If I had been rich, I would have travelled'],
             correct: 2
+        },
+        {
+            question: 'Переведите: "У меня мало времени"',
+            options: ['I have a few time', 'I have little time', 'I have few time', 'I have a little times'],
+            correct: 1
+        },
+        {
+            question: 'Переведите: "У неё есть несколько друзей"',
+            options: ['She has a little friends', 'She has few friends', 'She has a few friends', 'She has much friends'],
+            correct: 2
+        },
+        {
+            question: 'Переведите: "Это слишком дорого"',
+            options: ['It is enough expensive', 'It is too expensive', 'It is so expensive a', 'It is such expensive'],
+            correct: 1
+        },
+        {
+            question: 'Переведите: "Тебе нельзя здесь курить"',
+            options: ['You mustn\'t smoke here', 'You don\'t smoke here', 'You shouldn\'t smoked here', 'You can\'t to smoke here'],
+            correct: 0
+        },
+        {
+            question: 'Переведите: "Он уже сделал домашнее задание"',
+            options: ['He already did homework', 'He has already done his homework', 'He is already doing homework', 'He had already do homework'],
+            correct: 1
+        },
+        {
+            question: 'Переведите: "Сколько сахара тебе нужно?"',
+            options: ['How many sugar do you need?', 'How much sugar do you need?', 'How few sugar do you need?', 'How little sugars do you need?'],
+            correct: 1
+        },
+        {
+            question: 'Переведите: "Она такая умная девочка!"',
+            options: ['She is so smart girl!', 'She is such a smart girl!', 'She is too a smart girl!', 'She is enough smart girl!'],
+            correct: 1
+        },
+        {
+            question: 'Переведите: "Я обычно завтракаю в 7 утра"',
+            options: ['I am usually having breakfast at 7 am', 'I usually have breakfast at 7 am', 'I had usually breakfast at 7 am', 'I have usually breakfast at 7 am'],
+            correct: 1
+        },
+        {
+            question: 'Переведите: "Есть ли у тебя какие-нибудь вопросы?"',
+            options: ['Do you have any questions?', 'Do you have some questions?', 'Are you have any questions?', 'Do you have much questions?'],
+            correct: 0
         }
     ],
     'tense-comparison': [
@@ -667,6 +802,51 @@ const_exercises = {
         {
             question: 'Present Continuous vs Present Perfect: Look! It ___ right now.',
             options: ['rains', 'is raining', 'has rained', 'rained'],
+            correct: 1
+        },
+        {
+            question: 'Present Simple vs Present Continuous: Listen! The baby ___.',
+            options: ['cries', 'is crying', 'cried', 'has cried'],
+            correct: 1
+        },
+        {
+            question: 'Present Simple vs Present Continuous: Water ___ at 100°C.',
+            options: ['boils', 'is boiling', 'boiled', 'has boiled'],
+            correct: 0
+        },
+        {
+            question: 'Past Simple vs Present Perfect: I ___ him last week.',
+            options: ['have seen', 'saw', 'see', 'am seeing'],
+            correct: 1
+        },
+        {
+            question: 'Past Simple vs Present Perfect: She ___ never ___ sushi.',
+            options: ['did ... try', 'has ... tried', 'tried', 'was trying'],
+            correct: 1
+        },
+        {
+            question: 'Present Perfect vs Past Simple: We ___ in London for two years (still there).',
+            options: ['lived', 'have lived', 'live', 'are living'],
+            correct: 1
+        },
+        {
+            question: 'Present Perfect vs Past Simple: They ___ in London in 2019.',
+            options: ['have lived', 'lived', 'live', 'are living'],
+            correct: 1
+        },
+        {
+            question: 'Present Continuous vs Present Perfect Continuous: I ___ for you since 5 o\'clock.',
+            options: ['wait', 'am waiting', 'have been waiting', 'waited'],
+            correct: 2
+        },
+        {
+            question: 'Present Continuous vs Present Perfect Continuous: She ___ TV at the moment.',
+            options: ['watches', 'is watching', 'has watched', 'has been watching'],
+            correct: 1
+        },
+        {
+            question: 'Past Simple vs Past Continuous: While I ___, the phone rang.',
+            options: ['cooked', 'was cooking', 'have cooked', 'cook'],
             correct: 1
         }
     ]
