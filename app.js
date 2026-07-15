@@ -903,6 +903,31 @@ const checkDet = document.getElementById('check-det');
 const completeSessionBtn = document.getElementById('complete-session');
 
 // Navigation
+const menuToggle = document.getElementById('menu-toggle');
+const sidebar = document.getElementById('sidebar');
+const sidebarOverlay = document.getElementById('sidebar-overlay');
+
+function setMobileMenu(open) {
+    if (!sidebar || !menuToggle) return;
+    sidebar.classList.toggle('open', open);
+    menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    menuToggle.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
+    if (sidebarOverlay) {
+        sidebarOverlay.hidden = !open;
+    }
+    document.body.style.overflow = open ? 'hidden' : '';
+}
+
+if (menuToggle) {
+    menuToggle.addEventListener('click', () => {
+        setMobileMenu(!sidebar.classList.contains('open'));
+    });
+}
+
+if (sidebarOverlay) {
+    sidebarOverlay.addEventListener('click', () => setMobileMenu(false));
+}
+
 navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
@@ -913,7 +938,14 @@ navLinks.forEach(link => {
         
         sections.forEach(s => s.classList.remove('active'));
         document.getElementById(sectionId).classList.add('active');
+        setMobileMenu(false);
     });
+});
+
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+        setMobileMenu(false);
+    }
 });
 
 // Grammar topics
